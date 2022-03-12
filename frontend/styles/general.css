@@ -1,0 +1,399 @@
+/* Oo----- General Network CSS -----oO */
+/* Copyright 2017 - danielsnet.net */
+
+/* +++ General Element Styles +++ */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: white;
+    background-image: none;
+    color: black;
+    font-family: 'Times New Roman', serif;
+}
+
+h1,
+h2 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.2s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+footer {
+    clear: both;
+}
+
+a:hover {
+    transform: rotate(3deg);
+}
+
+/* General Class Styles */
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.gray {
+    color: gray;
+}
+
+.twist {
+    transition: 1s;
+}
+
+.twist:hover {
+    transform: rotate(360deg);
+}
+
+.tilt {
+    transition: 0.2s;
+}
+
+.tilt:hover {
+    transform: rotate(3deg);
+}
+
+/* General ID Styles */
+#shader {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    float: left;
+    position: fixed;
+    z-index: -1;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #293a4b;
+    background-image: url('../images/rain.gif');
+    opacity: 0.2;
+    float: left;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+
+#plot {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+#plot p {
+    font-family: sans-serif;
+}
+
+#plot h1,
+#plot h2 {
+    font-weight: bolder;
+}
+
+#plot-inner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 30px 100px 30px;
+}
+
+#bit-page {
+    font-size: 15px;
+}
+
+#bit-page h1,
+#bit-page h2 {
+    padding: 10px 0 5px 0;
+    margin: 0;
+}
+
+#bit-page h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+#bit-page h1 img {
+    width: 100px;
+}
+
+#bit-page h2 {
+    font-size: 24px;
+}
+
+#bit-page hr {
+    border: 0;
+    margin: 30px 0 20px 0;
+}
+
+#bit-page p {
+    padding: 0 0 8px 0;
+}
+
+/* +++ Header Style +++ */
+
+/* Header Base */
+header {
+    background-color: white;
+    color: black;
+    padding: 10px 0 25px 0;
+    text-align: center;
+    border-bottom: solid 2px black;
+    width: 100%;
+    z-index: 100;
+    position: relative;
+}
+
+header h1 {
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+/* Header Classes */
+.logo-text {
+    display: inline-block;
+    width: 200px;
+}
+
+.logo-text img {
+    height: 40px;
+    padding-bottom: 25px;
+}
+
+/* Header IDs */
+#logo {
+    width: 70px;
+    padding-bottom: 10px;
+}
+
+#logo-link {
+    text-decoration: none;
+}
+
+#search-text {
+    width: 350px;
+    transition: all 0.05s linear;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    border: 1px solid black;
+}
+
+#search-text:focus {
+    padding: 3px 0px 3px 3px;
+}
+
+#search-submit,
+#search-random {
+    padding: 2.5px;
+}
+
+#left-nav {
+    float: left;
+    position: absolute;
+    width: 400px;
+    left: 20px;
+    top: 12px;
+    text-align: left;
+}
+
+#left-nav div:nth-child(2) {
+    margin-left: 85px;
+    margin-top: 15px;
+}
+
+#right-nav {
+    float: right;
+    position: absolute;
+    width: 330px;
+    right: 30px;
+    top: 12px;
+    text-align: left;
+}
+
+#right-nav td {
+    padding: 0 10px 3px 0;
+}
+
+#right-nav td a {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#plane {
+    float: left;
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 200px;
+    top: -60px;
+    animation: spin 10s linear infinite;
+}
+
+#plane img {
+    width: 70px;
+    transform: rotate(25deg);
+}
+
+/* Molly */
+#molly {
+    float: left;
+    position: absolute;
+    top: 11px;
+    height: 100%;
+    padding-bottom: 50px;
+    z-index: 20;
+}
+
+#molly img {
+    width: 75px;
+    cursor: pointer;
+}
+
+#molly_bubble {
+    position: relative;
+    padding: 13px;
+    min-height: 80px;
+    width: 300px;
+    background: #e1e1e1;
+    border-radius: 17px;
+    border: #282828 dashed 3px;
+    top: -115px;
+    display: none;
+}
+
+#molly_bubble:after {
+    content: '';
+    position: absolute;
+    border-style: dashed;
+    border-width: 14px 19px 14px 0;
+    border-color: transparent #e1e1e1;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -14px;
+    left: -19px;
+    top: 30px;
+}
+
+#molly_bubble h2 {
+    margin: 5px 0 5px 0;
+}
+
+#molly_bubble img {
+    height: 35px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.molly-dance {
+    animation: wiggle 0.2s linear infinite;
+}
+
+/* 	+++ Annimations +++ */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* +++ Mobile Modifications +++ */
+@media (max-width: 1200px) {
+    #left-nav,
+    #right-nav,
+    nav {
+        float: none;
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        padding: 10px 0 10px 0;
+        margin: 0;
+    }
+
+    #plot-inner {
+        width: 90%;
+        padding: 30px 0 100px 0;
+    }
+
+    #nav-links {
+        padding: 0;
+    }
+
+    #nav-badges {
+        display: none;
+    }
+
+    nav div a {
+        display: inline;
+        padding: 10px;
+    }
+
+    #search-text {
+        width: 60%;
+    }
+
+    #plane,
+    #nav-top,
+    nav small,
+    nav img {
+        display: none;
+    }
+}

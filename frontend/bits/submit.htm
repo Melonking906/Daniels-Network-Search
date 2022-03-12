@@ -1,0 +1,89 @@
+<div id="bit-page">
+	<div class="center">
+		<h1 class="center">
+			<img src="images/windmill.gif" /><br/>
+			Submit a Website?
+		</h1>
+		<p>
+			Submit a website to be indexed by the network! It doesn't need to be made by you, if you think it fits send it along!
+		</p>
+		<h2>Lets add a website!</h2>
+		<form id="submit-form">
+			<strong>Address:</strong> <input id="submit-url" type="url" name="address" size="35" placeholder="https://melonking.net/" /> 
+			<strong>Category:</strong> <select name="type"><br/>
+			  <option value="personal" selected>Personal</option>
+			  <option value="organisation">Organisation</option>
+			  <option value="education">Education</option>
+			  <option value="information">Information</option>
+			  <option value="service">Service</option>
+			  <option value="entertainment">Entertainment</option>
+			  <option value="shop">Shop</option>
+			  <option value="writing">Writing</option>
+			  <option value="games">Games</option>
+			  <option value="music">Music</option>
+			  <option value="art">Art</option>
+			  <option value="joke">Joke</option>
+			</select>
+			<input id="submit-button" type="submit" value="Submit It Jimmy!" />
+		</form>
+		<p id="submit-result"></p>
+	</div>
+	
+	<hr/>
+	<h2>Details and Conditions:</h2>
+	<p>
+		The network is curated, so sites may or may not be added, my hope is to get as wide a range as possible, but there are a few key points.
+	</p>
+	<ul>
+		<li>Sites providing illegal content or information won't be added.</li>
+		<li>Wordpress/Tumblr/other generated sites will most lightly not be added. *</li>
+		<li>Flash based sites will not be added.</li>
+		<li>Sites should be mostly PG, excessive adult content will be avoided.</li>
+		<li>Sites must be mainly in English. **</li>
+	</ul>
+	<small>
+		* Generated sites offering very unique content or brilliant design may be added in some cases, but don't hold your breath :P<br/>
+		** Let me know if your interested in your language being added to the network. Enough interest and we will figure something out.
+		<br/><br/>
+		Sites may be denied or removed without notice or given reason.
+	</small>
+	
+</div>
+<style>
+	
+	#bit-page input, #bit-page select {
+		margin: 0 10px 10px 0;
+	}
+	
+	#submit-result {
+		text-decoration: underline;
+	}
+	
+</style>
+<script>
+	
+	var submitResults = $('#submit-result');
+	
+	$("#submit-form").submit(function(e) 
+	{
+		e.preventDefault();
+		
+		var formURL = $("#submit-url").val();
+		if( formURL == null || formURL.trim() == '' )
+		{
+			return;
+		}
+		
+	    $.post( SERVER_URL + '/Submit', $('#submit-form').serialize(), function(data) 
+	    {
+	    	submitResults.html( 'You added a site! ('+$("#submit-url").val()+')<br/>' + submitResults.html() );
+	    	$("#submit-url").val("");
+	    	sound_trumpet.play();
+	    	
+	    }).fail( function()
+	    {
+		    submitResults.html( 'Submitting...' );
+		});
+	});
+	
+</script>

@@ -1,0 +1,274 @@
+<div id="bit-page">
+    <div id="zone">
+        <div class="panel" id="info-panel">
+            <div id="nethome"><img src="images/nethome1.gif" alt="Network Homepage" /></div>
+            <p>Hello HUMAN, you've arrived at Daniel's Network, this is a search engine and directory service for finding <a href="https://emreed.net/LowTech_Directory.html" target="_blank">old-web/web revival sites</a>.</p>
+            <p>"May this help connect webmasters and help you discover new digital realms and ways of existing." -<a href="https://melonking.net/" target="_blank">Melonking</a></p>
+            <p><u>LOOK OUT these sites are unmoderated and only semi-curated</u> :^O</p>
+            <hr />
+            <h2>Can I make a site?</h2>
+            <p>Yep! In fact the world NEEDS you to make a site right now. <a onclick="bitsLink('make')">Click here to get some info on site making!</a></p>
+            <hr />
+            <h2>Submit a Site ???</h2>
+            <p>You can help grow the network by submitting a site you think should be on the search engine!</p>
+            <form id="submit-form">
+                <strong>Address:</strong> <input id="submit-url" type="url" name="address" size="35" placeholder="https://melonking.net/" />
+                <br />
+                <strong>Category:</strong>
+                <select name="type">
+                    <option value="personal" selected>Personal</option>
+                    <option value="art">Art</option>
+                    <option value="comics">Comics</option>
+                    <option value="education">Education</option>
+                    <option value="games">Games</option>
+                    <option value="hobbies">Hobbies</option>
+                    <option value="music">Music</option>
+                    <option value="writing">Writing</option>
+                    <option value="spooky">Spooky</option>
+                    <option value="technology">Technology</option>
+                    <option value="tokyo">Tokyo</option>
+                    <option value="other">Other</option>
+                </select>
+                <input id="submit-button" type="submit" value="Submit It Jimmy!" />
+            </form>
+            <p id="submit-result"></p>
+            <hr />
+            <h2>Give me a badge at once!</h2>
+            <p>OH, Ok! Here is your badge sir/mam! <img src="images/badges/network.gif" /></p>
+            <textarea><a target="_blank" href="https://search.melonking.net/"><img alt="Daniel's Network" src="https://search.melonking.net/images/badges/network.gif"></a></textarea>
+            <hr />
+            <h2>Support the Network? ;^$</h2>
+            <p>This is a lot of work! If you'd like to help keep the network online click below!</p>
+            <a href="https://ko-fi.com/B0B17133U" target="_blank"><img height="36" style="border: 0px; height: 36px" src="https://cdn.ko-fi.com/cdn/kofi4.png?v=3" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
+            <hr />
+            <h2>I neeeeeeed help :^[</h2>
+            <p>
+                Don't we all? Err, I mean sure, you can ask on the <a href="https://forum.melonking.net/index.php?board=9.0" target="_blank">MelonLand Forum</a> or e-mail: <br />
+                <strong>webmaster<img src="https://melonking.net/images/at-new.gif" />melonking.net</strong> <br /><br />
+            </p>
+        </div>
+        <div class="panel">
+            <h1>Recently Indexed Sites</h1>
+            <ul id="recent-index-plot"></ul>
+        </div>
+    </div>
+    <div id="badges">
+        <a href="https://melonking.net/" target="_blank"><img src="images/badges/MELON-BADGE-2.GIF" /></a>
+        <a href="https://forum.melonking.net/" target="_blank"><img src="images/badges/MELONLAND-FORUM.GIF" /></a>
+        <a href="https://yesterweb.org/" target="_blank"><img src="images/badges/yesterweb.gif" /></a>
+        <a href="https://ichi.city/" target="_blank"><img src="images/badges/ichi-city.png" /></a>
+        <a href="https://neocities.org/browse" target="_blank"><img src="images/badges/neocities.gif" /></a>
+    </div>
+</div>
+<style>
+    #zone {
+        width: 100%;
+        display: flex;
+        flex-basis: 0;
+        font-size: 16px;
+    }
+
+    #zone h1 {
+        text-align: center;
+    }
+
+    #zone hr {
+        border-top: 1px dashed white;
+    }
+
+    #info-panel {
+        background-color: black;
+        background-image: url('../images/cloud2.gif');
+        background-size: cover;
+        color: white;
+        border-color: white;
+        text-align: center;
+    }
+
+    #info-panel h1,
+    #info-panel h2 {
+        color: #00ff97;
+    }
+
+    #info-panel a {
+        color: #00d57e;
+    }
+
+    #info-panel input,
+    #info-panel select {
+        margin: 0 10px 10px 0;
+    }
+
+    #info-panel textarea {
+        width: 100%;
+    }
+
+    #nethome {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    #nethome img {
+        max-width: 100%;
+    }
+
+    #submit-result {
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    #recent-index-plot {
+        list-style: none;
+        margin: 20px 0 0 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #recent-index-plot li {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    #recent-index-plot li a {
+        margin-left: 25px;
+        flex-grow: 1;
+    }
+
+    #recent-index-plot li h1,
+    #recent-index-plot li h2 {
+        font-size: 26px;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    #recent-index-plot li h2 {
+        font-size: 16px;
+        color: black;
+    }
+
+    #recent-index-plot li img {
+        width: 50px;
+        align-self: center;
+    }
+
+    #badges {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .panel {
+        background-color: white;
+        color: black;
+        flex: 1;
+        margin: 20px;
+        padding: 30px;
+        border: dashed 2px #373837;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 1200px) {
+        #zone {
+            flex-flow: column;
+        }
+    }
+</style>
+<script>
+    var dnIndex = {};
+    dnIndex.auto_refresh = undefined;
+    dnIndex.auto_logo = undefined;
+    dnIndex.auto_momg = undefined;
+    dnIndex.recentIndexPlot = $('#recent-index-plot');
+    dnIndex.submitResults = $('#submit-result');
+
+    $('#momg-pic img').attr('src', 'https://momg.neocities.org/gifs/i-' + Math.floor(Math.random() * 99969 + 1) + '.gif');
+
+    $('#submit-form').submit(function (e) {
+        e.preventDefault();
+
+        let formURL = $('#submit-url').val();
+        if (formURL == null || formURL.trim() == '') {
+            return;
+        }
+
+        $.post(SERVER_URL + 'api/submit', $('#submit-form').serialize(), function (data) {
+            dnIndex.submitResults.html('You added a site! (' + $('#submit-url').val() + ')<br/>' + dnIndex.submitResults.html());
+            $('#submit-url').val('');
+            sound_trumpet.play();
+        }).fail(function () {
+            dnIndex.submitResults.html('Submitting...');
+        });
+    });
+
+    function nethomeCycle() {
+        $('#nethome img').attr('src', 'images/nethome' + Math.floor(Math.random() * 6 + 1) + '.gif');
+    }
+
+    function momgCycle() {
+        $('#momg-pic img').attr('src', 'https://momg.neocities.org/gifs/i-' + Math.floor(Math.random() * 99969 + 1) + '.gif');
+    }
+
+    $(function () {
+        runRecentIndexRender();
+        //Clear intervals that would otherwise keep running between page updates.
+        clearInterval(dnIndex.auto_refresh);
+        clearInterval(dnIndex.auto_logo);
+        clearInterval(dnIndex.auto_momg);
+        dnIndex.auto_refresh = setInterval(runRecentIndexRender, 15000);
+        dnIndex.auto_logo = setInterval(nethomeCycle, 600);
+        dnIndex.auto_momg = setInterval(momgCycle, 8000);
+    });
+
+    //Generate Indexes
+
+    function failRecentIndexes() {
+        let plotText = '';
+        plotText += '<div class="center"><br/><br/><br/><img src="../images/stop.gif" /><p>Network Error :(</p></div>';
+        alert('ya');
+        dnIndex.recentIndexPlot.html(plotText);
+    }
+
+    function renderRecentIndexes(sites) {
+        let plotText = '';
+        let siteLength = sites.length;
+
+        for (let i = 0; i < siteLength; i++) {
+            plotText += outputRecentIndex(sites[i]);
+        }
+
+        dnIndex.recentIndexPlot.html(plotText);
+    }
+
+    function outputRecentIndex(site) {
+        let output = '';
+
+        let title = site.title;
+        if (title == null || title.trim() == '') {
+            title = site.url;
+        }
+
+        output += '<li>';
+        output += '<img src="images/type-icons/' + site.type + '.gif"/>';
+        output += '	<a href="' + site.url + '" target="_blank">';
+        output += '		<h1>' + title + '</h1>';
+        output += '		<h2>' + site.url + '</h2>';
+        output += '	</a>';
+        //output += '<p>Indexed ' + moment(site.lastIndex).tz('Europe/Amsterdam', true).fromNow() + '</p>';
+        output += '</li>';
+
+        return output;
+    }
+
+    function runRecentIndexRender() {
+        jQuery.get(SERVER_URL + 'api/recent-indexes', function (data) {
+            //Convert to JSON object
+            let results = data;
+            //Render calls
+            if (results == null) {
+                failRecentIndexes();
+            } else {
+                renderRecentIndexes(results.sites);
+            }
+        });
+    }
+</script>

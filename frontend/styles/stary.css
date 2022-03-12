@@ -1,0 +1,43 @@
+body {
+	background-color: black;
+	background-image: url('../images/stars.gif');
+	background-size: 150px 150px;
+	color: white;
+}
+
+nav {
+	background-color: black;
+}
+
+nav > div > a {
+	color: #585858;
+}
+
+nav > div > a:hover {
+	color: #e17b21;
+}
+
+#shader {
+	background-color: black;
+	opacity: 0.8;
+}
+
+#bit-page h1, #bit-page h2 {
+	color: #00ff9f;
+}
+
+.block a {
+	color: #e17b21;
+}
+
+.block a:visited {
+	color: #585858;
+}
+
+.block-icons h1 {
+	color: yellow;
+}
+
+#search-top {
+	color: white;
+}
