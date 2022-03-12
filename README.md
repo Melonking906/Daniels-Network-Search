@@ -2,6 +2,8 @@
 
 This is a public repo version of Daniel's Network Search.
 
+This search will auto index, neocities.org, tilde.town and tilde.club
+
 This project is split into 3 parts:
 
 -   The backend handles searches and quiries sent from the frontend
