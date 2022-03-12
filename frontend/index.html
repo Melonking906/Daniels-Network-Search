@@ -1,18 +1,143 @@
-<html>
-    <head>
-        <title>Daniel's Network Search</title>
-        <meta http-equiv="refresh" content="8; URL=https://melonking.net/" />
-        <meta property="article:modified_time" content="2021-09-11T21:34:00-0700" />
-        <style>
-            body {
-                padding: 30px 30%;
-                text-align: center;
-                font-size: 2em;
-            }
-        </style>
-    </head>
-    <body>
-        <p>Thank you for visiting, this service has now been discontinued, please stand by to be redirected to the main site!</p>
-        <img src="images/cactus.gif" />
-    </body>
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<title>Daniel's Network</title>
+		
+		<meta itemprop="name" content="Daniel's Network Search">
+		<meta itemprop="description" content="The BEST search engine in existance EVER!! ;^)">
+		<meta name="description" content="The BEST search engine in existance EVER!! ;^)">
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/images/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/images/favicon/favicon.ico">
+		<meta name="apple-mobile-web-app-title" content="Daniel's Network Search">
+		<meta name="application-name" content="Daniel's Network Search">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		
+		<meta property="og:image:width" content="1513">
+		<meta property="og:image:height" content="792">
+		<meta property="og:title" content="Daniel's Network Search">
+		<meta property="og:description" content="Search the old web, only handmade sites, free from social media, hack the planet!!">
+		<meta property="og:url" content="https://search.melonking.net/">
+		<meta property="og:image" content="https://search.melonking.net/images/og-images/og-image.jpg">
+		
+		<link rel="stylesheet" type="text/css" href="https://momg.neocities.org/frames.css?v=1" />
+		
+		<link rel="stylesheet" href="styles/general.css?v=3">
+		<link rel="stylesheet" href="styles/search.css?v=1">
+		<link rel="stylesheet" href="styles/lightheart.css?v=2">
+		<style>
+			footer {
+				background-image: url("https://brain.melonking.net/hit?p=DanielsNetworkSearch"); /* Hit counter */  
+			}
+		</style>
+		
+		<link rel="search" type="application/opensearchdescription+xml" title="Daniel's Network Search" href="apps/daniels_net.xml">
+	</head>
+	
+	<body>
+		<div id="shader" ></div>
+		<div id="overlay"></div>
+		
+		<header>
+			<div id="plane">
+				<img src="images/plane.gif" />
+			</div>
+			
+			<a onclick="bitsLink('home')" id="logo-link">
+				<div class="logo-text right"><img src="images/daniels.gif" /></div>
+				<img id="logo" src="images/earth-p.gif" />
+				<div class="logo-text left"><img src="images/network.gif" /></div>
+			</a>
+			
+			<form id="search">
+				<input id="search-text"  placeholder="What would you like to find?" type="text" name="q" />
+				<input id="search-submit" type="submit" value="Lets Go Bucko!" />
+				<a href="/random" target="_blank"><button id="search-random" type="button">Random!</button></a>
+			</form>
+			
+			<div id="left-nav">
+				<div id="molly">
+					<img src="images/cactus.gif" />
+					<div id="molly_bubble"></div>
+				</div>
+				<div>
+					<h1>Welcome to the Network!</h1>
+					<p>
+						<div id="time">Loading the time...</div>
+						Are you ready for an adventure?
+					</p>
+				</div>
+			</div>
+			
+			<div id="right-nav">
+				<h1>Directory:</h1>
+				<table>
+					<tr>
+						<td><a>personal</a></td>
+						<td><a>writing</a></td>
+						<td><a>education</a></td>
+						<td><a>technology</a></td>
+					</tr>
+					<tr>
+						<td><a>games</a></td>
+						<td><a>music</a></td>
+						<td><a>comics</a></td>
+						<td><a>art</a></td>
+					</tr>
+					<tr>
+						<td><a>spooky</a></td>
+						<td><a>tokyo</a></td>
+						<td><a>hobbies</a></td>
+						<td><a>other</a></td>
+					</tr>
+				</table>
+			</div>
+		</header>
+		
+		<div id="plot">
+			<div id="plot-before"></div>
+			<div id="plot-inner">
+				<div class="center">
+					<br/><br/><br/>
+					<img src="images/search.gif" />
+					<h2>Loading the Network!</h2>
+					<noscript>
+						<h2>Warning! No Javascript!</h2>
+						<p>This site requires javascript to be enabled. Turn it on or you'll be loading forever!</p>
+					</noscript>
+				</div>
+			</div>
+		</div>
+		
+		<footer></footer>
+		
+		<script src="scripts/lib/jquery-3.6.0.min.js"></script>
+		<script src="scripts/lib/moment.min.js"></script>
+		<script src="scripts/lib/moment-timezone-with-data-10-year-range.min.js"></script>
+		<script>
+			var time = document.getElementById( "time" );
+			function setClock()
+			{
+				time.innerHTML = moment().format("[It's] dddd, Do [of] MMMM - h:mm a");
+			}
+			var clock = setInterval(function(){ setClock(); }, 10000);
+			setClock();
+		</script>
+		<script src="scripts/utils.js?v=1"></script>
+		<script src="scripts/searchFunctions.js?v=4"></script>
+		<script src="scripts/loader.js?v=1"></script>
+		<script src="scripts/molly.js?v=1"></script>
+		
+		<script data-collect-dnt="true" async defer src="https://nose.search.melonking.net/latest.js"></script>
+		<noscript><img src="https://nose.search.melonking.net/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+	</body>
+	
 </html>
